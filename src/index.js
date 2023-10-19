@@ -11,6 +11,7 @@ import rootReducer from "./reducers";
 
 import { getProducts } from "./actions/product.action";
 
+import { ThemeProvider } from "@material-tailwind/react";
 import "./index.css";
 import App from "./App";
 
@@ -26,7 +27,9 @@ const appRoot = createRoot(root);
 appRoot.render(
   <RouterProvider router={router}>
     <Provider store={store}>
-      <App />
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
     </Provider>
   </RouterProvider>
 );
