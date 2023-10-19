@@ -45,7 +45,7 @@ export const updateProduct = (data) => {
       .put(`http://localhost:5000/products/${data.id}`, data)
       .then((response) => {
         dispatch({
-          type: UPDATA_PRODUCT,
+          type: UPDATE_PRODUCT,
           payload: response.data,
         });
       });

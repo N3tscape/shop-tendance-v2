@@ -1,6 +1,10 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
+import { router } from "./router/router";
+
+import { RouterProvider } from "react-router-dom";
+
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from "./reducers";
@@ -20,7 +24,9 @@ store.dispatch(getProducts());
 const root = document.getElementById("root");
 const appRoot = createRoot(root);
 appRoot.render(
-  <Provider store={store}>
-    <App />
-  </Provider>
+  <RouterProvider router={router}>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </RouterProvider>
 );
