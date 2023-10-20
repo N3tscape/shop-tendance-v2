@@ -14,7 +14,7 @@ export default function ProductList() {
   }, [products]);
 
   return (
-    <div className="container mx-auto my-8">
+    <>
       <Typography variant="h4" color="blue-gray" className="text-center">
         Liste des produits
       </Typography>
@@ -32,6 +32,6 @@ export default function ProductList() {
           ))}
         </div>
       )}
-    </div>
+    </>
   );
 }

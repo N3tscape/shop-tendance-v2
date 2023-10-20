@@ -2,8 +2,8 @@ import ProductList from "../components/ProductList";
 
 export default function Home() {
   return (
-    <div>
+    <main className="container mx-auto my-8">
       <ProductList />
-    </div>
+    </main>
   );
 }

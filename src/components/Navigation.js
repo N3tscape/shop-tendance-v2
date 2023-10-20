@@ -23,7 +23,7 @@ function NavListMenu() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const renderItems = NAV_LIST_MENU.map((key) => (
     <NavLink to={key} key={key}>
-      <MenuItem className="flex items-center">
+      <MenuItem>
         <Typography
           variant="h6"
           color="blue-gray"
@@ -45,13 +45,18 @@ function NavListMenu() {
         allowHover={true}
       >
         <MenuHandler>
-          <Typography as="div" variant="small" className="font-medium">
+          <Typography
+            as="div"
+            variant="small"
+            color="blue-gray"
+            className="flex items-center gap-2 font-medium"
+          >
             <ListItem
-              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+              className="gap-2 py-2"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
-              Categories
+              Catégories
               <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`hidden h-3 w-3 transition-transform lg:block ${
@@ -116,6 +121,7 @@ export default function Navigation() {
             Shop Tendance
           </Typography>
         </Link>
+        <hr className="mx-2 h-8 border-r border-primary/10" />
         <div className="hidden lg:block">
           <NavList />
         </div>
