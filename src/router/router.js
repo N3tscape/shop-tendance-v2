@@ -4,6 +4,8 @@ import Navigation from "../components/Navigation";
 import NotFound from "../pages/NotFound";
 import Home from "../pages/Home";
 
+import ProductList from "../components/ProductList";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -21,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
+      },
+      {
+        path: ":categoryName",
+        element: <ProductList />,
       },
     ],
   },

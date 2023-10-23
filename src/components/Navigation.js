@@ -22,7 +22,7 @@ function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const renderItems = NAV_LIST_MENU.map((key) => (
-    <NavLink to={key} key={key}>
+    <NavLink to={`/${key}`} key={key}>
       <MenuItem className="flex items-center">
         <Typography
           variant="h6"
@@ -67,12 +67,14 @@ function NavListMenu() {
             </ListItem>
           </Typography>
         </MenuHandler>
+
         <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
           <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
             {renderItems}
           </ul>
         </MenuList>
       </Menu>
+
       <div className="block lg:hidden">
         <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
       </div>
