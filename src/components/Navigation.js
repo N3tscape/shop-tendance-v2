@@ -111,12 +111,11 @@ export default function Navigation() {
     <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2">
       <div className="flex items-center lg:justify-start justify-between text-blue-gray-900">
         <Link to="/">
-          <Typography
-            variant="h6"
-            className="mr-4 cursor-pointer py-1.5 lg:ml-2"
-          >
-            Shop Tendance
-          </Typography>
+          <img
+            src="/assets/shop-tendance-logo.png"
+            alt="Shop Tendance"
+            className="h-10 mr-4 py-1"
+          />
         </Link>
         <div className="hidden lg:block">
           <NavList />
