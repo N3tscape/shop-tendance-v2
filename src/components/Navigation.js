@@ -22,8 +22,8 @@ function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const renderItems = NAV_LIST_MENU.map((key) => (
-    <NavLink to={key} key={key}>
-      <MenuItem>
+    <NavLink to={`/${key}`} key={key}>
+      <MenuItem className="flex items-center">
         <Typography
           variant="h6"
           color="blue-gray"
@@ -72,12 +72,14 @@ function NavListMenu() {
             </ListItem>
           </Typography>
         </MenuHandler>
+
         <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
           <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
             {renderItems}
           </ul>
         </MenuList>
       </Menu>
+
       <div className="block lg:hidden">
         <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
       </div>
@@ -114,12 +116,11 @@ export default function Navigation() {
     <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2">
       <div className="flex items-center lg:justify-start justify-between text-blue-gray-900">
         <Link to="/">
-          <Typography
-            variant="h6"
-            className="mr-4 cursor-pointer py-1.5 lg:ml-2"
-          >
-            Shop Tendance
-          </Typography>
+          <img
+            src="/assets/shop-tendance-logo.png"
+            alt="Shop Tendance"
+            className="h-10 mr-4 py-1"
+          />
         </Link>
         <hr className="mx-2 h-8 border-r border-primary/10" />
         <div className="hidden lg:block">
