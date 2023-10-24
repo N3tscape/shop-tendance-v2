@@ -4,6 +4,6 @@
 
 @layer {
   body {
-    @apply bg-pink-100;
+    @apply bg-pink-50;
   }
 }
