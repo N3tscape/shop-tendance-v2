@@ -87,7 +87,7 @@ function NavListMenu() {
   );
 }
 
-function NavList(setOpenNav) {
+function NavList({ setOpenNav }) {
   const closeMobileNav = () => {
     setOpenNav(false);
   };
@@ -128,7 +128,7 @@ export default function Navigation() {
         </Link>
         <hr className="mx-2 h-8 border-r border-primary/10" />
         <div className="hidden lg:block">
-          <NavList />
+          <NavList setOpenNav={setOpenNav} />
         </div>
         <IconButton
           variant="text"
@@ -144,7 +144,7 @@ export default function Navigation() {
         </IconButton>
       </div>
       <Collapse open={openNav}>
-        <NavList />
+        <NavList setOpenNav={setOpenNav} />
       </Collapse>
     </Navbar>
   );
